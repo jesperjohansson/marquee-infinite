@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/jesperjohansson/marquee-infinite/issues"
   },
-  "homepage": "https://github.com/jesperjohansson/marquee-infinite#readme"
+  "homepage": "https://github.com/jesperjohansson/marquee-infinite#readme",
+  "dependencies": {
+    "lodash.debounce": "^4.0.8"
+  }
 }
