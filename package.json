@@ -1,0 +1,24 @@
+{
+  "name": "marquee-infinite",
+  "version": "0.0.1",
+  "description": "JS Library for creating infinite scrolling marquee-like elements",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jesperjohansson/marquee-infinite.git"
+  },
+  "keywords": [
+    "marquee",
+    "infinite",
+    "js"
+  ],
+  "author": "Jesper Johansson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jesperjohansson/marquee-infinite/issues"
+  },
+  "homepage": "https://github.com/jesperjohansson/marquee-infinite#readme"
+}
