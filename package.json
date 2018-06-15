@@ -2,9 +2,10 @@
   "name": "marquee-infinite",
   "version": "0.0.1",
   "description": "JS Library for creating infinite scrolling marquee-like elements",
-  "main": "index.js",
+  "main": "dist/marquee-infinite.js",
+  "module": "dist/marquee-infinite.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,29 @@
   "homepage": "https://github.com/jesperjohansson/marquee-infinite#readme",
   "dependencies": {
     "lodash.debounce": "^4.0.8"
+  },
+  "devDependencies": {
+    "babel-core": "6",
+    "babel-eslint": "^8.2.3",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "prettier": "^1.13.5",
+    "rollup-plugin-babel": "^3.0.4",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0"
+  },
+  "eslintConfig": {
+    "extends": "airbnb-base",
+    "plugins": [
+      "prettier"
+    ],
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true
+    }
   }
 }
