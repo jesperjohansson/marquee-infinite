@@ -1,5 +1,5 @@
 # marquee-infinite
-∞ JS Library for creating infinite scrolling marquee-like elements
+∞ JS Library for creating infinite/wrapping scrolling marquee-like elements
 
 ## Installation
 1. `yarn add marquee-infinite` or `npm install marquee-infinite`
