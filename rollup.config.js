@@ -12,7 +12,11 @@ export default {
   plugins: [
     resolve(),
     commonJS({
-      include: 'node_modules/lodash.debounce/*',
+      namedExports: {
+        exclude: 'node_modules/**',
+        'node_modules/lodash.debounce/debounce.js': ['debounce'],
+        sourceMap: false,
+      },
     }),
     babel({
       exclude: 'node_modules/**',
