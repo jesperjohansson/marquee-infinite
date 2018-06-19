@@ -3,9 +3,8 @@
   "version": "0.0.1",
   "description": "JS Library for creating infinite scrolling marquee-like elements",
   "main": "dist/marquee-infinite.js",
-  "module": "dist/marquee-infinite.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c && cp src/index.css dist/marquee-infinite.css"
   },
   "repository": {
     "type": "git",

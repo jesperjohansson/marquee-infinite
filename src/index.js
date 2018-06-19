@@ -57,7 +57,7 @@ function elementToSelector(element) {
     throw new Error(`Invalid element provided: ${typeof element}`);
   }
 
-  const className = element.className.replace(' ', '.');
+  const className = [...element.classList.values()].join('.');
   const tag = element.tagName.toLowerCase();
   return `${tag}${className && className.length ? '.' : ''}${className}`;
 }
@@ -91,9 +91,9 @@ function getDirectChildren(element) {
 
 const defaultOptions = {
   maxItems: 800,
-  setMinHeight: true,
   duration: 1000,
   classNames: {
+    container: 'marqueeInfinite',
     slider: 'marqueeInfiniteSlider',
     cell: 'marqueeInfiniteCell',
   },
@@ -106,13 +106,30 @@ class MarqueeInfinite {
    * - An existing element's selector or an element
    * @param {Object} [options]
    * - An object containing configuration options to initialize with
+   * @param {number} [options.maxItems]
+   * @param {number} [options.duration]
+   * @param {Object} [options.classNames]
+   * @param {string} [options.classNames.container]
+   * @param {string} [options.classNames.slider]
+   * @param {string} [options.classNames.cell]
    */
-  constructor(selectorOrElement = '.js-marquee-infinite', options = defaultOptions) {
-    const container = getElementFromArgument(selectorOrElement);
+  constructor(selectorOrElement, options) {
+    const container = getElementFromArgument(selectorOrElement || '.js-marquee-infinite');
     if (!container) return;
-    this.options = options;
     this.container = container;
+    this.options = Object.assign({}, defaultOptions, options || {});
+    if (options && options.classNames) {
+      this.options.classNames = Object.assign({}, defaultOptions.classNames, options.classNames);
+    }
+
+    this.setContainerClassName();
     this.start();
+  }
+
+  setContainerClassName() {
+    const { classNames } = this.options;
+    if (this.container.classList.contains(classNames.container)) return;
+    this.container.classList.add(classNames.container);
   }
 
   start() {
