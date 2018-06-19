@@ -1,0 +1,22 @@
+.marqueeInfinite {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marqueeInfinite > * {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: -moz-max-content;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+.marqueeInfinite > * > * {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  display: inline-block;
+}
