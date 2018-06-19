@@ -1,6 +1,6 @@
 {
   "name": "marquee-infinite",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "JS Library for creating infinite scrolling marquee-like elements",
   "main": "dist/marquee-infinite.js",
   "scripts": {
