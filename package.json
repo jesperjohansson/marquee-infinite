@@ -6,6 +6,7 @@
   "scripts": {
     "build": "rollup -c && cp src/index.css dist/marquee-infinite.css"
   },
+  "style": "dist/marquee-infinite.css",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jesperjohansson/marquee-infinite.git"
