@@ -1,7 +1,7 @@
 {
   "name": "marquee-infinite",
   "version": "0.0.4",
-  "description": "JS Library for creating infinite/wrapping scrolling marquee-like elements",
+  "description": "JS Library for creating infinite scrolling and wrapping marquee-like elements",
   "main": "dist/marquee-infinite.js",
   "scripts": {
     "build": "rollup -c && cp src/index.css dist/marquee-infinite.css"
